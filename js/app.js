@@ -1,29 +1,27 @@
 let listaNomes = document.getElementById('lista-amigos');
 let listNomesTexto = [];
-let i = 0;
-
-function adicionar(){
-
-let nome = document.getElementById('nome-amigo').value;
 
 
-listNomesTexto.push(nome);
-listaNomes.textContent = `${listNomesTexto}`;
+function adicionar() {
+
+    let nome = document.getElementById('nome-amigo').value;
 
 
-console.log(listNomesTexto);
-i = i + i;
+    listNomesTexto.push(nome);
+    listaNomes.textContent = `${listNomesTexto}`;
 
 }
 
-function sortear(){
+function sortear() {
 
+    let indiceSorteado = Math.floor(Math.random() * listNomesTexto.lenght);
+    document.getElementById('lista-sorteio').textContent = listNomesTexto[indiceSorteado];
 
 
 }
 
-function reiniciar(){
+function reiniciar() {
 
-document.getElementById('lista-amigos').textContent = '';
+    document.getElementById('lista-amigos').textContent = '';
 
 }
