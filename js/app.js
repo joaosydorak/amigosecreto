@@ -1,6 +1,6 @@
 
 let amigos = [];
-
+console.log(amigos);
 
 function adicionar() {
 
@@ -8,7 +8,9 @@ function adicionar() {
 
     let nome = document.getElementById('nome-amigo');
     let listaNomes = document.getElementById('lista-amigos');
-    amigos.push(nome.value);
+
+
+
 
     if (nome.value == '') {
 
@@ -16,7 +18,18 @@ function adicionar() {
         return;
 
 
-    } else {
+    } else if (amigos.includes(nome.value)) {
+
+        alert('Nome já existe na lista!');
+        return;
+
+    }
+
+
+
+    else {
+
+        amigos.push(nome.value);
 
         if (listaNomes.textContent == '') {
 
@@ -31,6 +44,9 @@ function adicionar() {
         nome.value = '';
 
     }
+
+
+
 }
 
 function sortear() {
